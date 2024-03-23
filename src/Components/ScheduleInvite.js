@@ -13,6 +13,7 @@ export default function ScheduleInvite(props) {
             <div className="mx-auto max-w-5xl py-6 sm:px-10 lg:px-8 bg-slate-50">
                 <div className='mx-auto max-w-7xl py-6 bg-white'>
                     <h1 className='text-start font-bold mx-5 sm:mx-10 text-3xl sm:text-4xl lg:text-5xl'>Events</h1>
+                    {event.length == 0 &&<h1>Please Add events</h1>}
                     {event.length > 0 && event.map((item) => {
                         const NawDateFormate = [new Date('Sat Mar 23 2024 21:23:00 GMT+0530 (India Standard Time)')];
 

@@ -48,7 +48,8 @@ const fontFamily = [
     'Serif', "Sans-serif", "Monospace"
 ]
 export default function Home() {
-    const [all_data, setAllData] = useState()
+    const [bg, setBg] = useState({ i: 0, value: 'radial-gradient(circle, rgba(63,244,251,1) 0%, rgba(252,219,70,1) 100%)' })
+    const [all_data, setAllData] = useState({ "theme": bg.value })
     const { data } = useContext(DataContext);
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -58,10 +59,8 @@ export default function Home() {
     const handleAddEvent = () => {
         const updatedEvents = [...All_event, all_data];
         setAllEvent(updatedEvents);
+        alert('Event Added Successfully!')
     }
-
-    console.log(All_event, 'this is all event')
-    const [bg, setBg] = useState({ i: 0, value: 'radial-gradient(circle, rgba(63,244,251,1) 0%, rgba(252,219,70,1) 100%)' })
     const handleSelect = (index, color) => {
         setBg({ i: index, value: color })
     }
